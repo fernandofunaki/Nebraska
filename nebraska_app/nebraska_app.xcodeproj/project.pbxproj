@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE5AC2A620855D8F0075C197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5AC2A520855D8F0075C197 /* AppDelegate.swift */; };
-		EE5AC2A820855D8F0075C197 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5AC2A720855D8F0075C197 /* ViewController.swift */; };
+		EE5AC2A820855D8F0075C197 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5AC2A720855D8F0075C197 /* TodoListViewController.swift */; };
 		EE5AC2AB20855D8F0075C197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE5AC2A920855D8F0075C197 /* Main.storyboard */; };
 		EE5AC2AE20855D8F0075C197 /* nebraska_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE5AC2AC20855D8F0075C197 /* nebraska_app.xcdatamodeld */; };
 		EE5AC2B020855D900075C197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE5AC2AF20855D900075C197 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		EE5AC2A220855D8F0075C197 /* nebraska_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nebraska_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5AC2A520855D8F0075C197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE5AC2A720855D8F0075C197 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE5AC2A720855D8F0075C197 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		EE5AC2AA20855D8F0075C197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE5AC2AD20855D8F0075C197 /* nebraska_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nebraska_app.xcdatamodel; sourceTree = "<group>"; };
 		EE5AC2AF20855D900075C197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				EE5AC2A520855D8F0075C197 /* AppDelegate.swift */,
-				EE5AC2A720855D8F0075C197 /* ViewController.swift */,
+				EE5AC2A720855D8F0075C197 /* TodoListViewController.swift */,
 				EE5AC2A920855D8F0075C197 /* Main.storyboard */,
 				EE5AC2AF20855D900075C197 /* Assets.xcassets */,
 				EE5AC2B120855D900075C197 /* LaunchScreen.storyboard */,
@@ -139,7 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE5AC2AE20855D8F0075C197 /* nebraska_app.xcdatamodeld in Sources */,
-				EE5AC2A820855D8F0075C197 /* ViewController.swift in Sources */,
+				EE5AC2A820855D8F0075C197 /* TodoListViewController.swift in Sources */,
 				EE5AC2A620855D8F0075C197 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
