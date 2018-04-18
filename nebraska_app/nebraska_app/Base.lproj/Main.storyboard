@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="LYI-K6-gcN" id="ohI-n9-FTR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Nebraska" id="B5H-qM-0hm"/>
+                    <navigationItem key="navigationItem" title="Nebraska" id="B5H-qM-0hm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tC4-Zf-cDp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addNewItem:" destination="LYI-K6-gcN" id="Rck-Xj-rib"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvN-jb-MYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
