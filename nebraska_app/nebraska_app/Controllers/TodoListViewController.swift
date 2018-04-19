@@ -10,21 +10,22 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
     
-    var todoListArray = ["Comrar Leite", "Comprar Café", "Comprar Pão"]
+    var todoListArray2 = ["Comrar Leite", "Comprar Café", "Comprar Pão"]
+    var todoListArray = [Item]()
+    
+    //Local storage
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
-        if let items = defaults.array(forKey: "TodoListArray") as? [String] {
+        if let items = defaults.array(forKey: "TodoListArray") as? [Item] {
             todoListArray = items
         }
-        
+      
         tableView.separatorStyle = .none
-       
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
-//        tableView.addGestureRecognizer(tapGesture)
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,26 +39,32 @@ class TodoListViewController: UITableViewController {
         return todoListArray.count
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoItemCell", for: indexPath)
-        cell.textLabel?.text = todoListArray[indexPath.row]
+        
+        let item = todoListArray[indexPath.row]
+        cell.textLabel?.text = item.title
+        cell.accessoryType = item.done ? .checkmark : .none
+        
         return cell
     }
     
-    //MARK - Delegate Methods
+    //MARK - Delegate Methods - When selecting an item
     /*Accessory: Check mark*/
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(todoListArray[indexPath.row])
-        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark{
-            tableView.cellForRow(at: indexPath)?.accessoryType = .none
-        }
-        else{
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        print(todoListArray[indexPath.row].title)
+        
+        //set flag done
+        todoListArray[indexPath.row].done = !todoListArray[indexPath.row].done
+        
+        //update tableView
+        tableView.reloadData()
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    //Button Events
+    //Add new item button pressed
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         
@@ -65,25 +72,22 @@ class TodoListViewController: UITableViewController {
         
         let action = UIAlertAction(title: "Add item", style: .default) { (action) in
             if textField.text != "" {
-                self.todoListArray.append(textField.text!)
-                print(textField.text!)
+                let item = Item()
+                item.title = textField.text!
+                self.todoListArray.append(item)
                 self.defaults.set(self.todoListArray, forKey: "TodoListArray")
                 self.tableView.reloadData()
             }
-            
         }
         
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Enter a new item"
             textField = alertTextField
-            
-            print(alertTextField.text)
         }
    
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
-        
     }
 }
 

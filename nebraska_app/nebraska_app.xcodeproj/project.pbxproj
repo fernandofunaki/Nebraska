@@ -13,6 +13,7 @@
 		EE5AC2AE20855D8F0075C197 /* nebraska_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE5AC2AC20855D8F0075C197 /* nebraska_app.xcdatamodeld */; };
 		EE5AC2B020855D900075C197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE5AC2AF20855D900075C197 /* Assets.xcassets */; };
 		EE5AC2B320855D900075C197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE5AC2B120855D900075C197 /* LaunchScreen.storyboard */; };
+		EE9FA67A208942D900711E27 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9FA679208942D900711E27 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EE5AC2AF20855D900075C197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE5AC2B220855D900075C197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE5AC2B420855D900075C197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE9FA679208942D900711E27 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		EE5AC2A420855D8F0075C197 /* nebraska_app */ = {
 			isa = PBXGroup;
 			children = (
+				EE9FA678208942C100711E27 /* Controllers */,
+				EE9FA677208942AD00711E27 /* Views */,
+				EE9FA6762089429600711E27 /* Models */,
 				EE5AC2A520855D8F0075C197 /* AppDelegate.swift */,
-				EE5AC2A720855D8F0075C197 /* TodoListViewController.swift */,
-				EE5AC2A920855D8F0075C197 /* Main.storyboard */,
 				EE5AC2AF20855D900075C197 /* Assets.xcassets */,
 				EE5AC2B120855D900075C197 /* LaunchScreen.storyboard */,
 				EE5AC2B420855D900075C197 /* Info.plist */,
 				EE5AC2AC20855D8F0075C197 /* nebraska_app.xcdatamodeld */,
 			);
 			path = nebraska_app;
+			sourceTree = "<group>";
+		};
+		EE9FA6762089429600711E27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE9FA679208942D900711E27 /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE9FA677208942AD00711E27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE5AC2A920855D8F0075C197 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE9FA678208942C100711E27 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE5AC2A720855D8F0075C197 /* TodoListViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9FA67A208942D900711E27 /* Item.swift in Sources */,
 				EE5AC2AE20855D8F0075C197 /* nebraska_app.xcdatamodeld in Sources */,
 				EE5AC2A820855D8F0075C197 /* TodoListViewController.swift in Sources */,
 				EE5AC2A620855D8F0075C197 /* AppDelegate.swift in Sources */,
